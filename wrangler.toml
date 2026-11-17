@@ -1,0 +1,13 @@
+name = "devforge1"
+main = "worker.js"
+compatibility_date = "2026-11-17"
+
+[observability]
+enabled = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "devforge-db"
+
+[vars]
+JWT_SECRET = "devforge-replace-this-with-a-long-random-string"
