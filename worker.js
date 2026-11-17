@@ -855,7 +855,7 @@ const CLIENT_JS = String.raw`
   function escAttr(s){return esc(s).replace(/"/g,'&quot;');}
 
   function escRich(s){
-    // Markdown-lite: **bold**, *italic*, `code`, @mention, #channel
+    // Markdown-lite: bold, italic, inline-code, @mention, #channel
     var out = esc(s);
     out = out.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
     out = out.replace(/(^|\s)\*([^*\n]+?)\*(?=\s|$)/g, '$1<em>$2</em>');
