@@ -859,7 +859,7 @@ const CLIENT_JS = String.raw`
     var out = esc(s);
     out = out.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
     out = out.replace(/(^|\s)\*([^*\n]+?)\*(?=\s|$)/g, '$1<em>$2</em>');
-    out = out.replace(/`([^`\n]+?)`/g, '<code>$1</code>');
+    out = out.replace(/\x60([^\x60\n]+?)\x60/g, '<code>$1</code>');
     out = out.replace(/@([a-zA-Z0-9_.-]{3,32})/g, '<span class="mention">@$1</span>');
     out = out.replace(/(^|\s)#([a-zA-Z0-9_-]{1,40})/g, '$1<span style="color:var(--ac);font-weight:600">#$2</span>');
     return out;
